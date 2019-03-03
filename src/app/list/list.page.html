@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      RECTANGULO
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+      <ion-img src="/assets/shapes.svg"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>Get Started</ion-card-subtitle>
+        <ion-card-title>Welcome to Ionic</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Rectangulo a consultar.</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-item>
+       
+      <ion-label>Base</ion-label>
+      <ion-input placeholder="Base" [(ngModel)]="base" name="Base"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Altura</ion-label>
+      <ion-input placeholder="Altura" [(ngModel)]="altura" name="Altura"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Resultado del area es:</ion-label>
+      <ion-input >{{ area }}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Resultado del perimetro es:</ion-label>
+      <ion-input disable>{{ perimetro }}</ion-input>
+    </ion-item>
+    <ion-button (click)="calcularArea()">
+      <ion-icon slot="start" name="star" ></ion-icon>
+      Calcular Area
+    </ion-button>
+    <ion-button  (click)="calculaPerimetro()">
+      Calcular Perimetro
+      <ion-icon slot="end" name="star"></ion-icon>
+    </ion-button>
+</ion-content>
+

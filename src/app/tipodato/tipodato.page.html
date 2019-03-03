@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Tipo de dato
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      <ion-card class="welcome-card">
+        <ion-img src="/assets/shapes.svg"></ion-img>
+        <ion-card-header>
+          <ion-card-subtitle>HOLA</ion-card-subtitle>
+          <ion-card-title>PROBANDO TIPO DE DATO</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Tipo de dato.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-item>
+         
+        <ion-label>Ingrese dato</ion-label>
+        <ion-input placeholder="tipo de dato" [(ngModel)]="TipoDato" name="TipoDato"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Es de tipo:</ion-label>
+        <ion-input >{{ Dato }}</ion-input>
+      </ion-item>
+      <ion-button (click)="describirdato()">
+        <ion-icon slot="start" name="star" ></ion-icon>
+        Describir dato
+      </ion-button>
+  </ion-content>
+  
+  
